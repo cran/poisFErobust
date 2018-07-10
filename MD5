@@ -1,0 +1,15 @@
+cbadcddefba2210d0dc3ccbce5b9e56b *DESCRIPTION
+7fe3f89dfa0b46199441d5b8d438c9d6 *LICENSE
+65d20ec90842716e174760505a5c6e6e *NAMESPACE
+fe874dddd13b13e7a179c5bb0c530f47 *NEWS.md
+ae55dd83a0e6b373ffa7b658d7b9b94c *R/pois.fe.robust.R
+90d94f37239479e1cc5978062054cee5 *README.md
+a546cbd84be0c59c509ec077cab5f305 *build/partial.rdb
+cd759ce1c2b1f1ac094dd42d3071917e *data/ex.dt.bad.rda
+7d850f68c7770e74a7ecd450b295abc1 *data/ex.dt.good.rda
+5d439d650b6fe60fda9799b653a2a96c *man/ex.dt.bad.Rd
+1e826a83943c89eb67bded91cca70860 *man/ex.dt.good.Rd
+41bffeeed6bdc3ed910d03dec6bec105 *man/pois.fe.robust.Rd
+5ce2c5e81c562b3645fc4f54180c7045 *man/poisFErobust-package.Rd
+6610e0813c17f91bd78f5273cb65f95e *tests/testthat.R
+b4d284cac2460874ce681f8f186468d8 *tests/testthat/test_numeric.R

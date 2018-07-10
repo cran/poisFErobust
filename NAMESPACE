@@ -1,0 +1,4 @@
+export(pois.fe.robust)
+import(data.table)
+importFrom("glmmML", "glmmboot")
+importFrom("stats", "lm", "pchisq", "reformulate", ".lm.fit")
