@@ -9,8 +9,9 @@ Compute standard errors following Wooldridge (1999) for Poisson regression with
 fixed effects, and a hypothesis test of the conditional mean assumption (3.1).
 }
 \usage{
-pois.fe.robust(outcome, xvars, group.name, index.name, 
-               data, qcmle.coefs = NULL, allow.set.key = FALSE)
+pois.fe.robust(outcome, xvars, group.name, data, 
+               qcmle.coefs = NULL, allow.set.key = FALSE,
+               index.name = NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,9 +24,6 @@ vector of character strings of the names of the independent variables.
   \item{group.name}{
 character string of the name of the grouping variable.
 }
-  \item{index.name}{
-character string of the name of the within-group index variable.
-}
   \item{data}{
 data.table which contains the variables named in other arguments. See details 
 for variable type requirements.
@@ -34,8 +32,12 @@ for variable type requirements.
 an optional numeric vector of coefficients in the same order as \code{xvars}. 
 If \code{NULL}, coefficients are estimated using \code{glmmML::glmmboot}.
 }
-  \item{allow.set.key}{logical. When \code{TRUE}, \code{data} will have its key set to
+  \item{allow.set.key}{logical. When \code{TRUE} (recommended),
+  \code{data} will have its key set to
   \code{group.name}, so it may be reordered. This should reduce memory usage.
+}
+  \item{index.name}{
+DEPRECATED (leave as NULL).
 }
 }
 \details{
@@ -50,6 +52,10 @@ each observation with no gaps within groups}
 }
 
 No observation in \code{data} may contain a missing value.
+
+Setting \code{allow.set.key} to \code{TRUE} is recommended to reduce
+memory usage; however, it will allow \code{data} to be modified
+(sorted in-place).
 
 \code{pois.fe.robust} also returns the p-value of the hypothesis test of the
 conditional mean assumption (3.1) as described in Wooldridge (1999) section 3.3.
@@ -72,18 +78,18 @@ panel data models," Journal of Econometrics, 90, 77-97.
 Evan Wright
 }
 \seealso{
-\code{\link[glmmML]{glmmboot}}
+\code{\link[glmmML:glmmboot]{glmmboot}}
 }
 \examples{
 # ex.dt.good satisfies the conditional mean assumption
 data("ex.dt.good")
 pois.fe.robust(outcome = "y", xvars = c("x1", "x2"), group.name = "id",
-               index.name = "id", data = ex.dt.good)
+               index.name = "day", data = ex.dt.good)
                
 # ex.dt.bad violates the conditional mean assumption
 data("ex.dt.bad")
 pois.fe.robust(outcome = "y", xvars = c("x1", "x2"), group.name = "id",
-               index.name = "id", data = ex.dt.bad)
+               index.name = "day", data = ex.dt.bad)
 }
 
 \keyword{ regression}% use one of  RShowDoc("KEYWORDS")

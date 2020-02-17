@@ -1,8 +1,8 @@
 Package: poisFErobust
 Type: Package
 Title: Poisson Fixed Effects Robust
-Version: 1.0.1
-Date: 2018-07-05
+Version: 2.0.0
+Date: 2020-02-17
 Authors@R: person("Evan", "Wright", email = "enwright@umich.edu",
     role = c("aut", "cre"))
 Description: Computation of robust standard errors of Poisson fixed effects 
@@ -15,8 +15,8 @@ NeedsCompilation: no
 RoxygenNote: 6.0.1
 Suggests: testthat
 LazyData: true
-Packaged: 2018-07-05 04:08:34 UTC; evan
+Packaged: 2020-02-17 20:28:47 UTC; evan
 Author: Evan Wright [aut, cre]
 Maintainer: Evan Wright <enwright@umich.edu>
 Repository: CRAN
-Date/Publication: 2018-07-10 16:40:10 UTC
+Date/Publication: 2020-02-17 21:40:06 UTC

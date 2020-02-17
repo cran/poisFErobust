@@ -11,7 +11,7 @@ Example usage:
 ```
 data("ex.dt.good")
 pois.fe.robust(outcome = "y", xvars = c("x1", "x2"), group.name = "id",
-               index.name = "id", data = ex.dt.good)
+               data = ex.dt.good)
 ```
 
 The standard errors should match those of the Stata command

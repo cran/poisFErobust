@@ -31,10 +31,10 @@ panel data models," Journal of Econometrics, 90, 77-97.
 # ex.dt.good satisfies the conditional mean assumption
 data("ex.dt.good")
 pois.fe.robust(outcome = "y", xvars = c("x1", "x2"), group.name = "id",
-               index.name = "id", data = ex.dt.good)
+               index.name = "day", data = ex.dt.good)
                
 # ex.dt.bad violates the conditional mean assumption
 data("ex.dt.bad")
 pois.fe.robust(outcome = "y", xvars = c("x1", "x2"), group.name = "id",
-               index.name = "id", data = ex.dt.bad)
+               index.name = "day", data = ex.dt.bad)
 }
